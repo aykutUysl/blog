@@ -1,0 +1,50 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../img/bg/adminbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.wrap{
+    width: 800px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.menu{
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+.image{
+    margin: 40px;
+    height: 60px;
+    float: left;
+    cursor: pointer;
+}
+.image:nth-child(1){margin-left: 80px}
+
+.container{
+    width: 500px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 0px auto;
+    margin-top: 40px;
+    padding: 10px;
+}
+.button{
+    width: 100px;
+    height: 40px;
+    float: right;
+}
+
+
+
+/*          message          */
+

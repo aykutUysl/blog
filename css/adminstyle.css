@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../img/bg/adminbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    margin: 0px auto;
+    margin-top: 100px;
+}
+.container img {
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    border-radius: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+input{
+    height: 50px;
+    width: 300px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    border:1px solid black
+}
+.button {
+    background-color: #0e0ca8;
+    color: #fafafa;
+    border: none;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #0e0cfd;
+}
+.message{
+    color: darkred;
+    margin-top: -250px;
+    font-size: 20px;
+}
+
+
+
+/*********    LOGİN     *********/
+
+.wrap{
+    width: 800px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.menu{
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+.image{
+    margin: 40px;
+    height: 60px;
+    float: left;
+    cursor: pointer;
+}
+.image:nth-child(1){margin-left: 80px}
+
+.contain{
+    padding: 0px;
+    width: 600px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 0px auto;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.headtable td{
+    height: 30px;
+    margin: 0px;
+    border:1px solid #000000;
+    text-align: center;
+    background-color: #11d914;
+    color: #ffffff;
+}
+.containtable td{
+    height: 30px;
+    margin: 0px;
+    border:1px solid #000000;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.icon{
+    height:20px;
+}
