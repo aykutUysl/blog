@@ -70,12 +70,10 @@ if(!$_SESSION){
             <strong>Konu : </strong>{$select["title"]}<br>
             <strong>Mesaj : </strong>{$select["message"]}<br>
             ";
+            $add=mysqli_query($connect,"update messages set `READ`=1 where id=\"$id\" ");
             if($_POST){
                 $eposta=$select["eposta"];
                 $text=$_POST["text"];
-                mail("$eposta","Aykut UYSAL Kişisel Blog",$text);
-                $add=mysqli_query($connect,"update messages set `READ`=1 where id=\"$id\" ");
-                header("Location:admin.php?page=message");
             }
             ?>
         </div>

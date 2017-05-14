@@ -42,7 +42,7 @@ include "page/option.php";
                 <div class="text1">
                     <?php
                     if($page==""){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -50,7 +50,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=oyun\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="spor"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -58,7 +58,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=spor\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="kitaplik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -66,7 +66,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=kitaplik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="sinematik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -74,7 +74,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=sinematik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="oyun"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -87,7 +87,7 @@ include "page/option.php";
                 <div class="text2">
                     <?php
                     if($page==""){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -95,7 +95,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=spor\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="spor"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY id DESC limit 1,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY date DESC limit 1,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -103,7 +103,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=spor\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="kitaplik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY id DESC limit 1,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY date DESC limit 1,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -111,7 +111,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=kitaplik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="sinematik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY id DESC limit 1,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY date DESC limit 1,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -119,7 +119,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=sinematik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="oyun"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY id DESC limit 1,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY date DESC limit 1,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -132,7 +132,7 @@ include "page/option.php";
                 <div class="text3">
                     <?php
                     if($page==""){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -140,7 +140,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=sinematik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="spor"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY id DESC limit 2,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY date DESC limit 2,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -148,7 +148,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=spor\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
 					}elseif($page=="kitaplik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY id DESC limit 2,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY date DESC limit 2,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -156,7 +156,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=kitaplik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="sinematik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY id DESC limit 2,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY date DESC limit 2,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -164,7 +164,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=sinematik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="oyun"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY id DESC limit 2,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY date DESC limit 2,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -177,7 +177,7 @@ include "page/option.php";
                 <div class="text4">
                     <?php
                     if($page==""){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY id DESC");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY date DESC");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -185,7 +185,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=kitaplik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="spor"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY id DESC limit 3,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='spor' ORDER BY date DESC limit 3,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -193,7 +193,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=spor\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="kitaplik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY id DESC limit 3,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='kitaplık' ORDER BY date DESC limit 3,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -201,7 +201,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=kitaplik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="sinematik"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY id DESC limit 3,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='film' ORDER BY date DESC limit 3,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);
@@ -209,7 +209,7 @@ include "page/option.php";
 						      $image
 						      <p>$article...<a href=\"page/article.php?id={$select["id"]}&page=sinematik\" class=\"continue\"> >>DEVAMINI OKU </a></p>";
                     }elseif($page=="oyun"){
-                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY id DESC limit 3,1");
+                        $search=mysqli_query($connect,"SELECT * FROM articles WHERE category='oyun' ORDER BY date DESC limit 3,1");
                         $select=mysqli_fetch_array($search);
                         $image="<img src=\"img/{$select["image"]}\" class=\"img\">";
                         $article=substr($select["article"],0,120);

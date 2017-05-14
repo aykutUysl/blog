@@ -45,9 +45,11 @@ $page=@$_GET["page"];
             echo "<h3><a href='#'>{$select["topic"]}</a></h3>";
             echo "<p>$article[0]</p>";
             echo "<div style=\" margin: 0px 16%;\" >"."<img src=\"../img/{$select["image"]}\" class=\"img\">"."</div>";
-            echo "<p>$article[1]</p><br><br>";
+            if (@$article[1]){
+            echo "<p>$article[1]</p><br><br>";}
             echo "<div style=\" margin: 0px 16%;\" >".$select["video"]."</div>";
-            echo "<p>&nbsp"."$article[2]</p>";
+            if (@$article[2]){
+            echo "<p>&nbsp"."$article[2]</p>";}
             for ($i=0;$i<5;$i++){echo "<br>";}
             ?>
         </div>

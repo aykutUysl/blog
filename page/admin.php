@@ -14,7 +14,7 @@ if ($_POST){
     }elseif ($user!=$select["user"] or $pass!=$select["password"]){
         $message="Yanlış Kullanıcı Adı veya Şifre";
     }else{
-        $_SESSION["oturum"]= true;
+        $_SESSION["session"]= true;
         $_SESSION["role"]= $select["role"];
     }
 }else{
@@ -87,7 +87,7 @@ if($page=="exit"){
         <div class="contain">
             <table class="headtable" cellspacing="0px">
                 <tr>
-                    <td style="width: 50px"><p>Sıra</p></td>
+                    <td style="width: 50px"><p>id</p></td>
                     <td style="width: 260px"><p>Başlık</p></td>
                     <td style="width: 90px"><p>Tarih</p></td>
                     <td style="width: 90px"><p>Kategori</p></td>
@@ -95,7 +95,7 @@ if($page=="exit"){
                 </tr>
             </table>
             <?php
-            $search=mysqli_query($connect,"select * from articles");
+            $search=mysqli_query($connect,"select * from articles order by date desc");
             while($select=mysqli_fetch_array($search)){
             ?>
             <table class="containtable" cellspacing="0px">
@@ -145,7 +145,7 @@ if($page=="exit"){
         <div class="contain">
             <table class="headtable" cellspacing="0px">
                 <tr>
-                    <td style="width: 50px"><p>Sıra</p></td>
+                    <td style="width: 50px"><p>id</p></td>
                     <td style="width: 175px"><p>Gönderen</p></td>
                     <td style="width: 275px"><p>Mesaj</p></td>
                     <td style="width: 50px"><p>Konu</p></td>
@@ -153,7 +153,7 @@ if($page=="exit"){
                 </tr>
             </table>
             <?php
-            $search=mysqli_query($connect,"select * from messages");
+            $search=mysqli_query($connect,"select * from messages order by id desc");
             while($select=mysqli_fetch_array($search)){
                 ?>
                 <table class="containtable" cellspacing="0px">
