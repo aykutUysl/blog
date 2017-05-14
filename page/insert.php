@@ -6,20 +6,9 @@ $id=@$_GET["id"];
 $page=@$_GET["page"];
 
 if(!$_SESSION){
-?>
-
-
-<html>
-<head>
-    <title>404 Not Found</title>
-</head>
-<body>
-<h1> Not Found</h1><br>
-<p style="margin-top: -15px ; font-size: 16px">The requested URL/page/insert.php was not found on this server</p>
-</body>
-</html>
-
-<?php }else{ if(@$_SESSION["role"]=="user"){ ?>
+    include "404.php";
+ }else{
+    if(@$_SESSION["role"]=="user"){ ?>
 
 
 <html>

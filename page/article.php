@@ -2,6 +2,14 @@
 include "option.php";
 $id=@$_GET["id"];
 $page=@$_GET["page"];
+$search=mysqli_query($connect,"SELECT * FROM articles WHERE id=\"$id\" ");
+$select=mysqli_fetch_array($search);
+$article=explode("@",$select["article"]);
+if($page!="spor" and $page!="kitaplik" and $page!="sinematik" and $page!="oyun"){
+    include "404.php";
+}elseif(empty($select)){
+    include "404.php";
+}else{
 ?>
 <html>
 <head>
@@ -39,9 +47,6 @@ $page=@$_GET["page"];
     <div class="background"  >
         <div class="content"  >
             <?php
-            $search=mysqli_query($connect,"SELECT * FROM articles WHERE id=\"$id\" ");
-            $select=mysqli_fetch_array($search);
-            $article=explode("@",$select["article"]);
             echo "<h3><a href='#'>{$select["topic"]}</a></h3>";
             echo "<p>$article[0]</p>";
             echo "<div style=\" margin: 0px 16%;\" >"."<img src=\"../img/{$select["image"]}\" class=\"img\">"."</div>";
@@ -69,4 +74,4 @@ $page=@$_GET["page"];
 </body>
 </html>
 
-
+<?php } ?>

@@ -1,6 +1,9 @@
 <?php
 $page=@$_GET["page"];
 include "page/option.php";
+if($page!="spor" and $page!="kitaplik" and $page!="sinematik" and $page!="oyun" and $page!=""){
+    include "page/404.php";
+}else{
 ?>
 <html>
 <head>
@@ -236,3 +239,4 @@ include "page/option.php";
 
 </body>
 </html>
+<? } ?>
